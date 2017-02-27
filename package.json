@@ -1,0 +1,19 @@
+{
+  "name": "js-utilities",
+  "version": "1.0.0",
+  "description": "JavaScript utilities for commonly needed functionality and uses.",
+  "main": "js-utilities.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ivan-grozni@github.com/ivan-grozni/js-utilities.git"
+  },
+  "author": "Ivan Grozni <ivan@apex.media> (http://apex.media)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivan-grozni/js-utilities/issues"
+  },
+  "homepage": "https://github.com/ivan-grozni/js-utilities#readme"
+}

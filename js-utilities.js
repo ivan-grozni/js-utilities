@@ -8,7 +8,7 @@ var utils = {
 	 * Return array of current query string parameters
 	 * @return {[type]} [description]
 	 */
-	getQueryStringParams: function () {
+	get_query_string_params: function () {
 		var vars = [], hash;
 		var q = document.URL.split('?')[1];
 		if (q != undefined) {
@@ -26,8 +26,8 @@ var utils = {
 	 * @param  {String} str the key to search for
 	 * @return {[type]}    The
 	 */
-	getSingleQueryParam: function(str){
-		return utils.rm_if_blank(utils.getQueryStringParams()[str]);
+	get_single_query_param: function(str){
+		return utils.rm_if_blank(utils.get_query_string_params()[str]);
 	},
 	/**
 	 * Is String Empoty
@@ -87,6 +87,11 @@ var utils = {
 	  sheet.innerHTML = styles;
 	  document.body.appendChild(sheet);
 	},
+	/**
+	 * Echo in console
+	 * @param  {string} variable 
+	 * @param  {string} value    
+	 */
 	echo: function(variable,value){
 		console.log(variable+": "+value);
 	},
@@ -96,7 +101,7 @@ var utils = {
 	 * @param  {String} message 	the message shown in the alert
 	 * @param  {String} target  	The selector of the alert container (leave blank for default #warning-messages)
 	 */
-	postAlert: function(type, message, target) {
+	post_alert: function(type, message, target) {
 		var selector = utils.is_empty(target) ? "#"+type+"-messages" : target;
         $(selector).innerHTML('<div class="alert alert-'+type+'"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
     }

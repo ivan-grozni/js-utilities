@@ -102,7 +102,8 @@ var utils = {
 	 * @param  {String} target  	The selector of the alert container (leave blank for default #warning-messages)
 	 */
 	post_alert: function(type, message, target) {
-		var selector = utils.is_empty(target) ? "#"+type+"-messages" : target;
-        $(selector).innerHTML('<div class="alert alert-'+type+'"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
+		var concatName = type+"-messages";
+		var selector = utils.is_empty(target) ? "#"+concatName : target;
+        $(selector).html('<div id="'+concatName+'" class="alert alert-'+type+'"><a class="close" data-dismiss="alert">×</a><span>'+message+'</span></div>')
     }
 }
